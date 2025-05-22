@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: "Lucida Console", Monaco, monospace;
+  background: var(--theme-background);
+  color: var(--theme-text-main-color);
+}
+
+button {
+  background-color: var(--theme-button-background);
+  color: var(--theme-button-text-color);
+  border: none;
+  border-radius: 0.3125rem;
+  padding: 0.5rem;
+}
+
+/**
+ * This is needed to disable zoom on double tap on mobile devices.
+ */
+* {
+  touch-action: manipulation;
+}

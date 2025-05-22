@@ -1,0 +1,17 @@
+.statistic {
+  height: 100%;
+}
+
+.statistic__debug {
+  white-space: pre;
+  overflow: auto;
+}
+
+.statistic__level-selector {
+  margin: 0 auto;
+  max-width: 6rem;
+}
+
+.statistic__reset-button {
+  grid-column: 1 / -1;
+}
