@@ -44,6 +44,10 @@ export async function saveTranslation(
   );
 }
 
+export async function getTranslations(db: any, userId: number) {
+  return db.all("SELECT * FROM translations WHERE user_id = ?", [userId]);
+}
+
 export async function getUserSettings(db: any, userId: number) {
   return db.get("SELECT * FROM users WHERE user_id = ?", [userId]);
 }

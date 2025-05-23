@@ -20,7 +20,8 @@ export async function audioToText(
     model: "whisper-1",
     file: audioFileResponse,
     response_format: "verbose_json",
-    language: "ru",
+    prompt:
+      "You will have english or russian text as input and you need to translate it to español text and you have to use native and natural spanish words and phrases.",
   });
 
   const cost = getWhisperCost(Number(response.duration));

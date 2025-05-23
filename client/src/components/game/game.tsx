@@ -44,7 +44,19 @@ export function GameComponent() {
   const { currentState, menuButtonText, mainButtonClickHandler } =
     gameStateService;
 
+  // parse hash params instead of regular query params
+  const hashParams = new URLSearchParams(window.location.hash.substring(1));
+  const data = hashParams.get("data");
+  console.log(">> hashParams", hashParams);
+
+  // this is a telegram mini app
+  // get the user ID from the tgAppData
+  const tgAppData = window.Telegram.WebApp.initData;
+  const userID = (tgAppData as any)?.user?.id;
+  console.log(">> userID", tgAppData, userID);
+
   const state = currentState.value;
+
 
   return (
     <GameStateContext.Provider value={gameStateService}>

@@ -7,11 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "build-github-pages": "vite build --base=https://js-headquaters.github.io/thoughts-in-foreign-language-bot/",
+    "build-github-pages": "vite build --base=https://js-headquaters.github.io/thoughts-in-foreign-language-bot/ && gh-pages -d dist/",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css,md}\""
   },
   "dependencies": {
     "@preact/signals": "^1.2.1",
+    "gh-pages": "^6.3.0",
     "preact": "^10.13.1"
   },
   "devDependencies": {
